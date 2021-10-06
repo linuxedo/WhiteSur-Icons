@@ -1,0 +1,48 @@
+<svg id="SvgjsSvg1102" width="288" height="288"
+    xmlns="http://www.w3.org/2000/svg" version="1.1"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:svgjs="http://svgjs.com/svgjs">
+    <defs id="SvgjsDefs1103"></defs>
+    <g id="SvgjsG1104" transform="matrix(1,0,0,1,0,0)">
+        <svg xmlns="http://www.w3.org/2000/svg"
+            xmlns:svgjs="http://svgjs.com/svgjs"
+            xmlns:xlink="http://www.w3.org/1999/xlink" width="288" height="288">
+            <svg xmlns="http://www.w3.org/2000/svg" width="288" height="288" viewBox="0 0 16.933 16.933">
+                <defs>
+                    <linearGradient id="d" x1="-15.961" x2="-.301" y1="-43.254" y2="-54.196" gradientTransform="matrix(1 0 0 1.1 16.669 62.435)" gradientUnits="userSpaceOnUse">
+                        <stop class="stopColor005ae1 svgShape" offset="0" stop-color="#0da760"></stop>
+                        <stop class="stopColor228be6 svgShape" offset="1" stop-color="#97ff95"></stop>
+                    </linearGradient>
+                    <linearGradient id="a" x1="-16.14" x2="-1.07" y1="-55.616" y2="-44.835" gradientTransform="matrix(1 0 0 1.1 16.669 62.435)" gradientUnits="userSpaceOnUse">
+                        <stop class="stopColor005ae1 svgShape" offset="0" stop-color="#0da760"></stop>
+                        <stop class="stopColor228be6 svgShape" offset="1" stop-color="#97ff95"></stop>
+                    </linearGradient>
+                    <linearGradient id="c" x1=".529" x2="16.217" y1="2.778" y2="14.872" gradientTransform="matrix(1 0 0 1.1 16.669 62.435)" gradientUnits="userSpaceOnUse">
+                        <stop class="stopColor005ae1 svgShape" offset="0" stop-color="#0da760"></stop>
+                        <stop class="stopColor228be6 svgShape" offset="1" stop-color="#97ff95"></stop>
+                    </linearGradient>
+                    <linearGradient id="b" x1="-16.14" x2="-1.07" y1="-55.616" y2="-44.835" gradientTransform="matrix(1 0 0 1.1 16.669 62.435)" gradientUnits="userSpaceOnUse" xlink:href="#a"></linearGradient>
+                </defs>
+                <g fill="#5e4aa6" stroke-width=".265" class="color5e4aa6 svgShape">
+                    <circle cx="-330.35" cy="-328.38" r="0" fill="#000000" class="color000 svgShape"></circle>
+                    <circle cx="-312.11" cy="-326.25" r="0" fill="#000000" class="color000 svgShape"></circle>
+                    <circle cx="-306.02" cy="-333.07" r="0" fill="#000000" class="color000 svgShape"></circle>
+                    <circle cx="-308.84" cy="-326.01" r="0" fill="#000000" class="color000 svgShape"></circle>
+                </g>
+                <g fill="#5e4aa6" stroke-width=".265" class="color5e4aa6 svgShape">
+                    <circle cx="-330.35" cy="-328.38" r="0" fill="#000000" class="color000 svgShape"></circle>
+                    <circle cx="-312.11" cy="-326.25" r="0" fill="#000000" class="color000 svgShape"></circle>
+                    <circle cx="-306.02" cy="-333.07" r="0" fill="#000000" class="color000 svgShape"></circle>
+                    <circle cx="-308.84" cy="-326.01" r="0" fill="#000000" class="color000 svgShape"></circle>
+                    <circle cx="-328.8" cy="-330.45" r="0" fill="#000000" class="color000 svgShape"></circle>
+                </g>
+                <g class="color000 svgShape" fill="#000000">
+                    <path fill="url(#b)" d="m-8.2026-51.317h-7.9373v-3.6379c0-0.36531 0.29614-0.66144 0.66144-0.66144h5.6223l1.6536 1.3229z" transform="matrix(1 0 0 1.1 16.669 63.956)"></path>
+                    <rect width="15.874" height="10.848" x=".529" y="4.233" fill="url(#c)" ry=".794"></rect>
+                    <rect width="14.987" height="9.922" x=".973" y="4.696" fill="#fffffc" class="colorfffffc svgShape" ry=".299"></rect>
+                </g>
+                <path fill="url(#d)" d="m15.742 4.2329h-7.2759l-1.6536 1.4552h-5.6223c-0.36531 0-0.66144 0.32575-0.66144 0.72759v7.9373c0 0.40184 0.29614 0.72759 0.66144 0.72759h14.552c0.36531 0 0.66145-0.32575 0.66145-0.72759v-9.3926c0-0.40184-0.29614-0.72759-0.66145-0.72759z"></path>
+            </svg>
+        </svg>
+    </g>
+</svg>
