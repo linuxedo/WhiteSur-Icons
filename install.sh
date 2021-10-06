@@ -13,8 +13,8 @@ fi
 SRC_DIR="$(cd "$(dirname "$0")" && pwd)"
 
 THEME_NAME=WhiteSur
-COLOR_VARIANTS=('' '-dark')
-THEME_VARIANTS=('' '-purple' '-pink' '-red' '-orange' '-yellow' '-green' '-grey')
+COLOR_VARIANTS=('' '-Dark')
+THEME_VARIANTS=('' '-Purple' '-Pink' '-Red' '-Orange' '-Yellow' '-Green' '-Grey' '-Aqua' '-Sand' '-Black')
 
 usage() {
 cat << EOF
@@ -23,7 +23,7 @@ cat << EOF
   OPTIONS:
     -d, --dest DIR          Specify destination directory (Default: $DEST_DIR)
     -n, --name NAME         Specify theme name (Default: $THEME_NAME)
-    -t, --theme VARIANT     Specify theme color variant(s) [default|purple|pink|red|orange|yellow|green|grey|all] (Default: blue)
+    -t, --theme VARIANT     Specify theme color variant(s) [default|Purple|Pink|Red|Orange|Yellow|Green|Grey|Aqua|Sand|Black|all] (Default: blue)
     -a, --alternative       Install alternative icons for software center and file-manager
     -b, --bold              Install bold panel icons version
     --black                 Black panel icons version
@@ -37,7 +37,7 @@ install() {
   local theme=${3}
   local color=${4}
 
-  local THEME_DIR=${dest}/${name}${theme}${color}
+  local THEME_DIR=${dest}/${name}${color}${theme}
 
   [[ -d ${THEME_DIR} ]] && rm -rf ${THEME_DIR}
 
@@ -48,7 +48,7 @@ install() {
   cp -r ${SRC_DIR}/src/index.theme                                                     ${THEME_DIR}
 
   cd ${THEME_DIR}
-  sed -i "s/${name}/${name}${theme}${color}/g" index.theme
+  sed -i "s/${name}/${name}${color}${theme}/g" index.theme
 
   if [[ ${color} == '' ]]; then
     mkdir -p                                                                               ${THEME_DIR}/status
@@ -74,11 +74,11 @@ install() {
     fi
 
     if [[ ${theme} != '' ]]; then
-      cp -r ${SRC_DIR}/colors/color${theme}/*.svg                                          ${THEME_DIR}/places/scalable
+      cp -r ${SRC_DIR}/colors/Color${theme}/*.svg                                          ${THEME_DIR}/places/scalable
     fi
   fi
 
-  if [[ ${color} == '-dark' ]]; then
+  if [[ ${color} == '-Dark' ]]; then
     mkdir -p                                                                           ${THEME_DIR}/{apps,categories,emblems,devices,mimes,places,status}
 
     cp -r ${SRC_DIR}/src/actions                                                       ${THEME_DIR}
@@ -98,7 +98,7 @@ install() {
       cp -r ${SRC_DIR}/src/status/symbolic-budgie/*.svg                                ${THEME_DIR}/status/symbolic
     fi
 
-    # Change icon color for dark theme
+    # Change icon color for Dark theme
     sed -i "s/#363636/#dedede/g" "${THEME_DIR}"/{actions,devices,places,status}/{16,22,24}/*
     sed -i "s/#363636/#dedede/g" "${THEME_DIR}"/actions/32/*
     sed -i "s/#363636/#dedede/g" "${THEME_DIR}"/{actions,apps,categories,emblems,devices,mimes,places,status}/symbolic/*
@@ -112,18 +112,18 @@ install() {
     cp -r ${SRC_DIR}/links/mimes/symbolic                                              ${THEME_DIR}/mimes
 
     cd ${dest}
-    ln -s ../${name}${theme}/animations ${name}${theme}-dark/animations
-    ln -s ../../${name}${theme}/categories/32 ${name}${theme}-dark/categories/32
-    ln -s ../../${name}${theme}/emblems/16 ${name}${theme}-dark/emblems/16
-    ln -s ../../${name}${theme}/emblems/22 ${name}${theme}-dark/emblems/22
-    ln -s ../../${name}${theme}/emblems/24 ${name}${theme}-dark/emblems/24
-    ln -s ../../${name}${theme}/mimes/16 ${name}${theme}-dark/mimes/16
-    ln -s ../../${name}${theme}/mimes/22 ${name}${theme}-dark/mimes/22
-    ln -s ../../${name}${theme}/mimes/scalable ${name}${theme}-dark/mimes/scalable
-    ln -s ../../${name}${theme}/apps/scalable ${name}${theme}-dark/apps/scalable
-    ln -s ../../${name}${theme}/devices/scalable ${name}${theme}-dark/devices/scalable
-    ln -s ../../${name}${theme}/places/scalable ${name}${theme}-dark/places/scalable
-    ln -s ../../${name}${theme}/status/32 ${name}${theme}-dark/status/32
+    ln -s ../${name}${theme}/animations ${name}-Dark${theme}/animations
+    ln -s ../../${name}${theme}/categories/32 ${name}-Dark${theme}/categories/32
+    ln -s ../../${name}${theme}/emblems/16 ${name}-Dark${theme}/emblems/16
+    ln -s ../../${name}${theme}/emblems/22 ${name}-Dark${theme}/emblems/22
+    ln -s ../../${name}${theme}/emblems/24 ${name}-Dark${theme}/emblems/24
+    ln -s ../../${name}${theme}/mimes/16 ${name}-Dark${theme}/mimes/16
+    ln -s ../../${name}${theme}/mimes/22 ${name}-Dark${theme}/mimes/22
+    ln -s ../../${name}${theme}/mimes/scalable ${name}-Dark${theme}/mimes/scalable
+    ln -s ../../${name}${theme}/apps/scalable ${name}-Dark${theme}/apps/scalable
+    ln -s ../../${name}${theme}/devices/scalable ${name}-Dark${theme}/devices/scalable
+    ln -s ../../${name}${theme}/places/scalable ${name}-Dark${theme}/places/scalable
+    ln -s ../../${name}${theme}/status/32 ${name}-Dark${theme}/status/32
   fi
 
   (
@@ -176,32 +176,44 @@ while [[ "$#" -gt 0 ]]; do
             themes+=("${THEME_VARIANTS[0]}")
             shift
             ;;
-          purple)
+          Purple)
             themes+=("${THEME_VARIANTS[1]}")
             shift
             ;;
-          pink)
+          Pink)
             themes+=("${THEME_VARIANTS[2]}")
             shift
             ;;
-          red)
+          Red)
             themes+=("${THEME_VARIANTS[3]}")
             shift
             ;;
-          orange)
+          Orange)
             themes+=("${THEME_VARIANTS[4]}")
             shift
             ;;
-          yellow)
+          Yellow)
             themes+=("${THEME_VARIANTS[5]}")
             shift
             ;;
-          green)
+          Green)
             themes+=("${THEME_VARIANTS[6]}")
             shift
             ;;
-          grey)
+          Grey)
             themes+=("${THEME_VARIANTS[7]}")
+            shift
+            ;;
+          Aqua)
+            themes+=("${THEME_VARIANTS[8]}")
+            shift
+            ;;
+          Sand)
+            themes+=("${THEME_VARIANTS[9]}")
+            shift
+            ;;
+          Black)
+            themes+=("${THEME_VARIANTS[10]}")
             shift
             ;;
           all)
